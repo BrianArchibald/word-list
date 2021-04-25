@@ -10,9 +10,17 @@ h3{
 }
 
 body {
-  background-color: #cce4f7;
+  background-image: url('unicorn-01.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+}
+
+.btn-primary {
+  background-color: rgb(238, 61, 200);
+  margin: 10px;
 }
