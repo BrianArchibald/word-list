@@ -1,5 +1,7 @@
-import  Card  from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import  { Card, Row, Col } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap'
 
 function App() {
 
@@ -21,26 +23,27 @@ const word = getRandomWord(wordList);
   // ]
 
   return (
-    <Card className="my-3 p-3 rounded">
+    <Container className="main-container">
+      <Card className="text-center">
+      <Card.Header>Elladie's Word List</Card.Header>
       <Card.Body>
-          <Card.Title as="div">
-            <strong>Elladie's Words</strong>
-          </Card.Title>
-
-          <Card.Text as="div">
-            <div className="my-3">
-              {word}
-            </div>
-          </Card.Text>
-
-          <Card.Text as="h4">
-            <Button onClick={getRandomWord(wordList)}>
-              <h4>Next Word</h4>
-            </Button>
-          </Card.Text>
-
+        <Card.Title>{word}</Card.Title>
+        <Card.Text>
+        </Card.Text>
+        <Button variant="primary">Next</Button>
+        <br></br>
       </Card.Body>
+      <Card.Footer className="text-muted">
+        <Button variant="secondary">Right</Button>
+        <br/>
+        <br/>
+        Score : 1
+        <br/>
+        <br/>
+        <Button variant="secondary">Wrong</Button>
+      </Card.Footer>
     </Card>
+    </Container>
 
   );
 }
